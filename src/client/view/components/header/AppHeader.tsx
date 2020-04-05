@@ -5,7 +5,7 @@ interface IHeaderProps{
     centerNavigationBar : boolean;
 }
 
-const Header : React.FC<IHeaderProps> = props => {
+const AppHeader : React.FC<IHeaderProps> = props => {
     return (
         <div className={`header`}>
           <h1>{`Kim Anh & Mark`}</h1>
@@ -13,4 +13,4 @@ const Header : React.FC<IHeaderProps> = props => {
         </div>
     )
 }
-export default Header;
+export default AppHeader;

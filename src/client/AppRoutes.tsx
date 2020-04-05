@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, useLocation } from 'react-router-dom';
 import './AppRoutes.scss';
 import RouteModel from './RouteModel';
-import Header from './view/components/header/Header';
+import AppHeader from './view/components/header/AppHeader';
 import About from './view/page/About';
 import Contact from './view/page/Contact';
 import Work from './view/page/Work';
@@ -13,7 +13,7 @@ const AppRoutes : React.FC = props => {
     const routesVisibleClassName = (isIndex) ? "" : "visible";
     return (
         <div className={`app-routes`}>
-          <Header centerNavigationBar={isIndex} />
+          <AppHeader centerNavigationBar={isIndex} />
           <div className={`app-routes-content ${routesVisibleClassName}`}>
             <Switch>
                 <Route path={RouteModel.work.getPath()}>
