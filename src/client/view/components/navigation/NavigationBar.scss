@@ -9,9 +9,20 @@
 
 .navigation-bar{
     font-size: 20px;
+    position: relative;
+    height: 5vh;
+    transition: height 1s;
+    &.center-vertically{
+        // 3.3em is h1 height (2em) + margin (2x0.67em)
+        height: calc(50vh - 3.3em);
+    }
     >.navigation-bar-content{
         display: inline-block;
         text-align: center;
+        position: absolute;
+        bottom : 0px;
+        left: 50%;
+        transform: translateX(-50%);
         >.navigation-bar-underline{
             height: 3px;
             width: 0%;
