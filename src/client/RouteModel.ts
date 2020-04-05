@@ -3,13 +3,17 @@ const RouteModel = {
         getLink : () => "/",
         getPath : () => "/"
     },
-    aboutUs : {
-        getLink : () => "/about-us",
-        getPath : () => "/about-us",
+    work : {
+        getLink : () => "/work",
+        getPath : () => "/work",
     },
-    portfolio : {
-        getLink : () => "/portfolio",
-        getPath : () => "/portfolio",
+    about : {
+        getLink : () => "/about",
+        getPath : () => "/about",
+    },
+    contact : {
+        getLink : () => "/contact",
+        getPath : () => "/contact",
     }
 }
 export default RouteModel;

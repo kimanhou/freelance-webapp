@@ -12,13 +12,13 @@ const NavigationBar : React.FC<INavigationBarProps> = props => {
     return (
         <div className={`navigation-bar ${centerVertically}`}>
             <div className={`navigation-bar-content`}>
-                <NavigationLink to={RouteModel.aboutUs.getLink()}>
-                    About us
+                <NavigationLink to={RouteModel.work.getLink()}>
+                    Work
                 </NavigationLink>
-                <NavigationLink to={RouteModel.portfolio.getLink()}>
-                    Portfolio
+                <NavigationLink to={RouteModel.about.getLink()}>
+                    About
                 </NavigationLink>
-                <NavigationLink to={RouteModel.portfolio.getLink()}>
+                <NavigationLink to={RouteModel.contact.getLink()}>
                     Contact
                 </NavigationLink>
                 <div className={`navigation-bar-underline`}/>
