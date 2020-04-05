@@ -1,0 +1,23 @@
+@keyframes underline{
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.navigation-bar{
+    >.navigation-bar-content{
+        display: inline-block;
+        text-align: center;
+        >.navigation-bar-underline{
+            height: 3px;
+            width: 0%;
+            margin: auto;
+            margin-top: 5px;
+            background-color: black;
+            animation: underline 2s forwards;
+        }
+    }
+}
