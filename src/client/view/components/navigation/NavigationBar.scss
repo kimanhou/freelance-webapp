@@ -14,6 +14,7 @@
     transition: height 1s;
     &.center-vertically{
         // 3.3em is h1 height (2em) + margin (2x0.67em)
+        // vertical middle is 50vh, but 45vh looks slighly better
         height: calc(45vh - 3.3em);
     }
     >.navigation-bar-content{
