@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from './Page';
 
 const Work : React.FC = props => {
     return (
-        <div>
+        <Page>
             <h2>Work</h2>
-        </div>
+        </Page>
     )
 }
 export default Work;

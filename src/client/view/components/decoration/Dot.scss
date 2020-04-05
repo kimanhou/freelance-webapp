@@ -1,0 +1,9 @@
+@import "../../../mixins"; 
+
+.decoration-dot{
+    @include fade-in-mixin;
+    position: relative;
+    .decoration-dot-content{
+        position: absolute;
+    }
+}

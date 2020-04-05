@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from './Page';
 
 const About : React.FC = props => {
     return (
-        <div>
+        <Page>
             <h2>About</h2>
-        </div>
+        </Page>
     )
 }
 export default About;

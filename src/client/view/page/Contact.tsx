@@ -1,10 +1,11 @@
 import React from 'react';
+import Page from './Page';
 
 const Contact : React.FC = props => {
     return (
-        <div>
+        <Page>
             <h2>Contact</h2>
-        </div>
+        </Page>
     )
 }
 export default Contact;

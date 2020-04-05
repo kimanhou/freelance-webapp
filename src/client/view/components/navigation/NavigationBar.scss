@@ -14,7 +14,7 @@
     transition: height 1s;
     &.center-vertically{
         // 3.3em is h1 height (2em) + margin (2x0.67em)
-        height: calc(50vh - 3.3em);
+        height: calc(45vh - 3.3em);
     }
     >.navigation-bar-content{
         display: inline-block;
