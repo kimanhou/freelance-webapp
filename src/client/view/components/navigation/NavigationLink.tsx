@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import './NavigationLink.scss';
 
 interface INavigationLinkProps{
@@ -11,8 +11,11 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
     const doNavigate = () => {
         history.push(props.to);
     }
+    const location = useLocation();
+    const isActive = location.pathname != null && location.pathname == props.to;
+    const activeClassName = (isActive) ? "active" : "";
     return (
-        <div className={`navigation-link`} onClick={doNavigate}>
+        <div className={`navigation-link ${activeClassName}`} onClick={doNavigate}>
             {props.children}
         </div>
     )
