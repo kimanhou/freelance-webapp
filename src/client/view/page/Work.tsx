@@ -6,7 +6,7 @@ const Work : React.FC = props => {
     return (
         <Page>
             <h2>Work</h2>
-            <ProjectItem name={`Project A`} imageUrl={`/projectA.png`} description={`
+            <ProjectItem name={`Project A`} imageUrl={'/projectA.png'} description={`
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                 Etiam a euismod magna, at porttitor enim. Donec pharetra diam eu pellentesque dictum. 
                 Cras rutrum felis at justo feugiat, non vestibulum orci mollis. In nisl mauris, euismod 

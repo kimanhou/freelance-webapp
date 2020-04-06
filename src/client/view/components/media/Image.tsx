@@ -8,10 +8,10 @@ interface IImageProps{
 }
 
 const Image : React.FC<IImageProps> = props => {
-    const className = (props.className != null)?props.className:"";
-    const imageBorder = (props.border === true)?"image-border":"";
+    const className = (props.className != null) ? props.className : "";
+    const imageBorder = (props.border === true) ? "image-border" : "";
     return (
-        <img className={`image ${imageBorder} ${className}`} src={props.url} />
+       <img className={`image ${imageBorder} ${className}`} src={props.url} />
     )
 }
 export default Image;
