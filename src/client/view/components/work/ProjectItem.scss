@@ -1,6 +1,12 @@
 .project-item{
     >.project-item-img{
-        height: 200px;
-        float: left;
+        width: 300px;
+        margin-right: 20px;
+        display: inline-block;
+    }
+    >.project-item-text{
+        display: inline-block;
+        width: calc(100% - 326px);
+        vertical-align: top;
     }
 }
