@@ -16,7 +16,7 @@ const AppRoutes : React.FC = props => {
     const backgroundImageIdexRef = useRef(0);
     const [backgroundUrl, setBackgroundUrl] = useState(backgroundImages[backgroundImageIdexRef.current]);
     useEffect(() => {
-        const interval = setInterval(changeBackgroundUrl, 3000);
+        const interval = setInterval(changeBackgroundUrl, 5000);
         return () => clearInterval(interval);
     }, []);
     const changeBackgroundUrl = () => {
