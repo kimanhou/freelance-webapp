@@ -11,9 +11,17 @@ const AppRoutes : React.FC = props => {
     const location = useLocation();
     const isIndex = location.pathname == null || location.pathname == "/";
     const routesVisibleClassName = (isIndex) ? "" : "visible";
+    const backgroundVisibleClassName = (isIndex) ? "visible" : "";
+    
     return (
         <div className={`app-routes`}>
-          <AppHeader centerNavigationBar={isIndex} />
+            <div className={`background ${backgroundVisibleClassName}`}>
+                <img src="./DSC_0217.jpg" />
+                <img src="./DSC_0104.jpg" />
+                <img src="./DSC_0441.jpg" />
+                <img src="./DSC_0517.jpg" />
+            </div>
+          <AppHeader isIndex={isIndex} />
           <div className={`app-routes-content ${routesVisibleClassName}`}>
             <Switch>
                 <Route path={RouteModel.work.getPath()}>
