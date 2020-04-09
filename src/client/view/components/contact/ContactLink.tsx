@@ -6,12 +6,14 @@ import PersonContact from './PersonContact';
 
 interface IContactLinkProps{
     person : PersonContact;
+    updateContent : (activeContact : PersonContact) => void;
 }
 
 const ContactLink : React.FC<IContactLinkProps> = props => {
     const history = useHistory();
     const doNavigate = () => {
         history.push(props.person.getLink());
+        props.updateContent(props.person);
     }
     const location = useLocation();
     const isActive = location.pathname == props.person.getLink();

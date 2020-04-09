@@ -1,15 +1,16 @@
 import React from 'react';
+import './ContactContent.scss';
+import PersonContact from './PersonContact';
 
 interface IContactContentProps {
-    tel : string;
-    email : string;
+    activeContact : PersonContact;
 }
 
 const ContactContent : React.FC<IContactContentProps> = props => {
     return (
-        <div>
-            <p>Tel : {props.tel}</p>
-            <p>Email : {props.email}</p>
+        <div className='contact-content'>
+            <p>Tel : {props.activeContact.getTel()}</p>
+            <p>Email : {props.activeContact.getEmail()}</p>
         </div>
     );
 }
