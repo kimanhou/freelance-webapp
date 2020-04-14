@@ -1,0 +1,8 @@
+@import "../../../mixins"; 
+
+.about-content{
+    display: inline-block;
+    &.fade-in{
+        @include fade-in-mixin;
+    }
+}
