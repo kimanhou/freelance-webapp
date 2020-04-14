@@ -1,0 +1,25 @@
+@import "../../../mixins"; 
+
+.contact-content{
+    display: inline-block;
+    &.fade-in{
+        @include fade-in-mixin;
+    }
+    svg {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: black;
+    }
+    svg:hover {
+        transform: scale(1.2);
+        transition: all 0.5s;
+    }
+    >.postal-address {
+        opacity: 0;
+        margin-top: 20px;
+        &.visible {
+            transition: opacity 1s;
+            opacity: 1;
+        }
+    }
+}

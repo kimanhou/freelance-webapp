@@ -13,7 +13,7 @@ const NavigationLink : React.FC<INavigationLinkProps> = props => {
         history.push(props.to);
     }
     const location = useLocation();
-    const isActive = location.pathname == props.to;
+    const isActive = location.pathname.startsWith(props.to);
     const activeClassName = (isActive) ? "active" : "";
     return (
         <div className={`navigation-link ${activeClassName}`} onClick={doNavigate}>

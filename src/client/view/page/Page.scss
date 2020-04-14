@@ -3,4 +3,5 @@
 .page{
     @include fade-in-mixin;
     padding: 10px 100px;
+    margin-top: 20px;
 }

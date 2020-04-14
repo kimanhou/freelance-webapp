@@ -10,12 +10,12 @@
     from {
         opacity: 0;
     }
-    to{
+    to {
         opacity: 1;
     }
 }
 
-@mixin fade-in-mixin{
+@mixin fade-in-mixin {
     opacity: 0;
     animation: fade-in-animation 1s forwards;
 }
