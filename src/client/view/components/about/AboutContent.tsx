@@ -1,33 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import PersonContact from '../contact/PersonContact';
 import './AboutContent.scss';
+import { Switch, Route } from 'react-router-dom';
+import RouteModel from '../../../RouteModel';
+import MarkAbout from './MarkAbout';
+import KimAnhAbout from './KimAnhAbout';
 
 interface IAboutContentProps {
-    activeContact ?: PersonContact;
 }
 
 const AboutContent : React.FC<IAboutContentProps> = props => {
-    const [fadeInClassName, setFadeInClassName] = useState("");
-    useEffect(() => {
-        setFadeInClassName("fade-in");
-        setTimeout(() => {
-            setFadeInClassName("")
-        }, 1000);
-    }, [props.activeContact]);
-
-
-    if(props.activeContact != null) {
-        return (
-            <div className={`about-content ${fadeInClassName}`}>
-                <p>Something about {props.activeContact.getName()}</p>
-            </div>
-        );
-    }
     return (
-        <div className={`about-content ${fadeInClassName}`}>
-            <p>Hi there !</p>
-            <p>We are Kim Anh and Mark, and we are awesome.</p>
-        </div>
+        <Switch>
+            <Route path={RouteModel.about.mark.getPath()}>
+                <MarkAbout />
+            </Route>
+            <Route path={RouteModel.about.kimAnh.getPath()}>
+                <KimAnhAbout />
+            </Route>
+            <Route path={RouteModel.about.getPath()}>
+                <p>Default about</p>
+            </Route>
+        </Switch>
     );
 }
 
