@@ -16,8 +16,9 @@
     }
     >.postal-address {
         opacity: 0;
-        transition: opacity 1s;
+        margin-top: 20px;
         &.visible {
+            transition: opacity 1s;
             opacity: 1;
         }
     }

@@ -8,11 +8,12 @@ import './Contact.scss';
 import { useLocation } from 'react-router-dom';
 
 const Contact : React.FC = props => {
-    const mark = new PersonContact("Mark", RouteModel.contactUser.getLink("mark"), "+44 7 123 456 789", "mark@gmail.com", "https://www.linkedin.com/in/markpoussard/", "Bacon Street");
-    const kimAnh = new PersonContact("Kim Anh", RouteModel.contactUser.getLink("kim-anh"), "+44 7 987 654 321", "chicken@gmail.com", "https://www.linkedin.com/in/kanguyenlu/", 'Unicorn House');
+    const mark = new PersonContact("Mark", RouteModel.contactUser.getLink("mark"), "+44 7 123 456 789", "mark@gmail.com", "https://www.linkedin.com/in/markpoussard/", "20 Bacon Street, E2 6DY London, United Kingdom");
+    const kimAnh = new PersonContact("Kim Anh", RouteModel.contactUser.getLink("kim-anh"), "+44 7 987 654 321", "chicken@gmail.com", "https://www.linkedin.com/in/kanguyenlu/", 'Unicorn House, 3 Plough Yard, EC2A 3LP London, United Kingdom');
     const contacts = [mark, kimAnh];
 
     const [activeContact, setActiveContact] = useState<PersonContact | undefined>();
+    
     const updateContent = (activeContact : PersonContact) => {
         setActiveContact(activeContact);
     }
