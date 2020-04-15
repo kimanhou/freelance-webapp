@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Page from './Page';
+import React, { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
+import RouteModel from '../../RouteModel';
 import ContactBar from '../components/contact/ContactBar';
 import ContactContent from '../components/contact/ContactContent';
 import PersonContact from '../components/contact/PersonContact';
-import RouteModel from '../../RouteModel';
-import './Contact.scss';
-import { useLocation } from 'react-router-dom';
+import Page from './Page';
 
 const Contact : React.FC = props => {
     const mark = new PersonContact("Mark", RouteModel.contactUser.getLink("mark"), "+44 7 123 456 789", "mark@gmail.com", "https://www.linkedin.com/in/markpoussard/", "20 Bacon Street, E2 6DY London, United Kingdom");

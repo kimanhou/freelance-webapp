@@ -10,6 +10,14 @@ const RouteModel = {
     about : {
         getLink : () => "/about",
         getPath : () => "/about",
+        mark : {
+            getLink : () => `/about/mark`,
+            getPath : () => "/about/mark",
+        },
+        kimAnh : {
+            getLink : () => `/about/kim-anh`,
+            getPath : () => "/about/kim-anh",
+        }
     },
     contact : {
         getLink : () => "/contact",
@@ -18,6 +26,6 @@ const RouteModel = {
     contactUser : {
         getLink : (user : string) => `/contact/${user}`,
         getPath : () => "/contact/:user",
-    }
+    },
 }
 export default RouteModel;
